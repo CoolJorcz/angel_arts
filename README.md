@@ -7,4 +7,4 @@ This is my first stab at creating an arts management app
 - PostgresSQL
 
 ####Built With
-- jQuery, Ember.js, Rails
+- jQuery, Ember.js, Railsgit

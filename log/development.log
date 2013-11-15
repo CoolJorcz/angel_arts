@@ -84,3 +84,41 @@ Started GET "/specs" for 127.0.0.1 at 2013-11-14 21:03:52 -0600
 Processing by JasmineRails::SpecRunnerController#index as HTML
   Rendered /Users/ajorczak/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4.0/gems/jasmine-rails-0.4.9/app/views/jasmine_rails/spec_runner/index.html.erb within layouts/jasmine_rails/spec_runner (0.7ms)
 Completed 200 OK in 256ms (Views: 255.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 21:52:05 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (31.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 486ms (Views: 485.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 21:53:53 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 71ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+  [1m[36mStory Load (63.8ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 21:55:04 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/stories" for 127.0.0.1 at 2013-11-14 21:55:16 -0600
+Processing by Api::V1::StoriesController#index as JSON
+  [1m[35mStory Load (29.4ms)[0m  SELECT "stories".* FROM "stories"
+Completed 200 OK in 128ms (Views: 16.2ms | ActiveRecord: 75.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 21:55:20 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/stories" for 127.0.0.1 at 2013-11-14 21:55:21 -0600
+Processing by Api::V1::StoriesController#index as JSON
+  [1m[36mStory Load (0.4ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms)
