@@ -1,0 +1,13 @@
+Started GET "/specs?console=true&spec" for 127.0.0.1 at 2013-11-14 21:03:35 -0600
+Processing by JasmineRails::SpecRunnerController#index as HTML
+  Parameters: {"console"=>"true", "spec"=>nil}
+  Rendered /Users/ajorczak/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4.0/gems/jasmine-rails-0.4.9/app/views/jasmine_rails/spec_runner/index.html.erb within layouts/jasmine_rails/spec_runner (3.6ms)
+Compiling jasmine.css to /Users/ajorczak/projects/rails_projects/angel_arts/spec/tmp/assets/jasmine.css
+Compiling jasmine.js to /Users/ajorczak/projects/rails_projects/angel_arts/spec/tmp/assets/jasmine.js
+Compiling jasmine-html.js to /Users/ajorczak/projects/rails_projects/angel_arts/spec/tmp/assets/jasmine-html.js
+Compiling json2.js to /Users/ajorczak/projects/rails_projects/angel_arts/spec/tmp/assets/json2.js
+Compiling jasmine-console-shims.js to /Users/ajorczak/projects/rails_projects/angel_arts/spec/tmp/assets/jasmine-console-shims.js
+Compiling jasmine-console-reporter.js to /Users/ajorczak/projects/rails_projects/angel_arts/spec/tmp/assets/jasmine-console-reporter.js
+Compiling jasmine-boot.js to /Users/ajorczak/projects/rails_projects/angel_arts/spec/tmp/assets/jasmine-boot.js
+Compiling jasmine-specs.js to /Users/ajorczak/projects/rails_projects/angel_arts/spec/tmp/assets/jasmine-specs.js
+Completed 200 OK in 784ms (Views: 783.5ms | ActiveRecord: 0.0ms)

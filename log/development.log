@@ -1,0 +1,86 @@
+Initializing jasmine.yml configuration
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (21.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStories (20131115021635)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (65.3ms)[0m  [1mCREATE TABLE "stories" ("id" serial primary key, "name" character varying(255), "body" text) [0m
+  [1m[35mSQL (38.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131115021635"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (13.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStories (20131115022351)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (74.1ms)[0m  [1mCREATE TABLE "stories" ("id" serial primary key, "name" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "stories" already exists
+: CREATE TABLE "stories" ("id" serial primary key, "name" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStories (20131115022351)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "stories" ("id" serial primary key, "name" character varying(255), "body" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (26.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131115022351"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (48.9ms)[0m  INSERT INTO "stories" ("body", "created_at", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "Given I am a user <br /> When I visit the stories index <br /> Then I should see a list of stories"], ["created_at", Fri, 15 Nov 2013 02:33:32 UTC +00:00], ["name", "User views a list of stories"], ["updated_at", Fri, 15 Nov 2013 02:33:32 UTC +00:00]]
+  [1m[36m (93.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/api/v1/stories.json" for 127.0.0.1 at 2013-11-14 20:34:08 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::StoriesController#index as JSON
+  [1m[35mStory Load (20.4ms)[0m  SELECT "stories".* FROM "stories"
+Completed 200 OK in 101ms (Views: 18.1ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 20:41:14 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (22.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 791ms (Views: 790.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 20:42:13 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 284ms (Views: 283.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 20:43:53 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 335ms (Views: 334.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 20:45:10 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (30.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 546ms (Views: 545.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 20:52:26 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 1470ms (Views: 1469.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 21:00:23 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 318ms (Views: 318.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/stories" for 127.0.0.1 at 2013-11-14 21:00:24 -0600
+Processing by Api::V1::StoriesController#index as JSON
+  [1m[35mStory Load (26.9ms)[0m  SELECT "stories".* FROM "stories"
+Completed 200 OK in 113ms (Views: 22.2ms | ActiveRecord: 49.7ms)
+
+
+Started GET "/specs" for 127.0.0.1 at 2013-11-14 21:03:52 -0600
+Processing by JasmineRails::SpecRunnerController#index as HTML
+  Rendered /Users/ajorczak/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4.0/gems/jasmine-rails-0.4.9/app/views/jasmine_rails/spec_runner/index.html.erb within layouts/jasmine_rails/spec_runner (0.7ms)
+Completed 200 OK in 256ms (Views: 255.8ms | ActiveRecord: 0.0ms)
