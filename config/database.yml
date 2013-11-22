@@ -19,7 +19,6 @@ development:
   encoding: unicode
   database: angel_arts_development
   pool: 5
-  username: angel_arts
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -56,5 +55,4 @@ production:
   encoding: unicode
   database: angel_arts_production
   pool: 5
-  username: angel_arts
   password:

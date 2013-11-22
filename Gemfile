@@ -79,6 +79,7 @@ gem 'carrierwave_direct'
 gem 'fog'
 gem 'unf'
 
+#Heroku Launch
 gem 'newrelic_rpm'
 
 # Use ActiveModel has_secure_password
@@ -89,3 +90,8 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
+
+#For Asset Serving
+gem 'rails_12factor', group: :production
+
+ruby "2.0.0"
