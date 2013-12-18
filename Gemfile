@@ -41,7 +41,7 @@ group :test do
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'compass-rails', '~> 1.1.2'
 gem 'susy'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -52,6 +52,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'underscore-rails'
 
 
 # Use Ember.js and it's framework
